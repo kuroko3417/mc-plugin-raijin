@@ -8,26 +8,83 @@
 
 基本構文
 
-`ri <Sub> <Options>...`
+`ri <Options...>`
 
-|Sub|Options|Desecaption|  
+## 主要コマンド
+
+#### ri pur
+
+スポーン時に雷を落としたいプレイヤーを設定するオプションです。  
+TETU_tanukiさんのリスキル（煉獄）が元ネタです。
+
+|Command|Options|Desecaption|  
 |---|---|---|
-|pur||スポーン時に雷を落としたいプレイヤーを設定するコマンドです。|  
-|obs||Join時に雷を落としたいプレイヤーを設定するコマンドです。|  
-|rs||指定したプレイヤーまたはプレイヤーグループに雷を落とします。|  
-||playerNames or groupNames|プレイヤーまたはプレイヤーグループを指定します。（複数指定可能）|
-|death||雷を落としたときに確殺するかどうか設定するコマンドです。|  
-||true|雷を落としたときに確殺します。|  
-||false|雷を落としたときに確殺しません。|  
-||reset|設定を初期化します。（初期値:true）|
-|power||落雷地点の爆発する威力を設定するコマンドです。|
-||0 ~ 1000|爆発する威力を設定します。|
-||reset|設定を初期化します。（初期値:0）|  
-|target||雷を落とすプレイヤーリストを設定するコマンドです。|
-||add|<groupName> <playerNames>...|プレイヤーをリストに追加します。|
-||remove|<groupName> <playerNames>...|プレイヤーをリストから除外します。|
-||list|groupName|リストに所属するプレイヤー一覧を表示します。
-|targets|||プレイヤーリストに関するコマンドです。|
-||delete|groupName|プレイヤーリストを削除します。|
-||clear|groupName|プレイヤーリストをすべて削除します。|
-||list||プレイヤーリスト一覧一覧を表示します。|
+|ri pur add|&lt;groupName&gt;|対象のプレイヤーを追加します。|
+|ri pur remove|&lt;groupName&gt;|対象からプレイヤを除外します。|
+|ri pur list|none|対象のプレイヤー名一覧を表示します。|
+
+備考:オフラインプレイヤーを指定することが可能です。
+
+#### ri obs
+
+Join時に雷を落としたいプレイヤーを設定するコマンドです。  
+killコマンド実行するタイミングで上手く逃げたINKYATENSEIを確殺するために作成しました。
+
+|Command|Options|Desecaption|  
+|---|---|---|
+|ri obs add|&lt;groupName&gt;|対象のプレイヤーを追加します。|
+|ri obs remove|&lt;groupName&gt;|対象からプレイヤを除外します。|
+|ri obs list|none|対象のプレイヤー名一覧を表示します。|
+
+備考:オフラインプレイヤーを指定することが可能です。
+
+注意:設定対象がJoinして雷が落ちたあと、設定対象から自動的に除外されます。
+
+#### ri rs
+
+指定したプレイヤーまたはプレイヤーグループに雷を落とします。
+
+|Command|Options|Desecaption|  
+|---|---|---|
+|ri rs|&lt;playerNames... or groupNames...&gt;|指定したプレイヤーまたはプレイヤーグループに雷を落とします。|  
+
+### 設定コマンド
+
+#### ri death
+
+雷を落としたときに確殺するかどうか設定します。
+
+|Command|Options|Desecaption|  
+|---|---|---|
+|ri death true|none|雷を落としたときに確殺します。|  
+|ri death false|none|雷を落としたときに確殺しません。|  
+|ri death reset|none|設定を初期化します。（初期値:true）|
+
+#### ri power
+
+雷の落雷地点の爆発威力を設定します。
+
+|Command|Options|Desecaption|  
+|---|---|---|
+|ri power|0 ~ 1000|爆発する威力を設定します。|
+|ri power reset|none|設定を初期化します。（初期値:0）|
+
+#### ri target
+
+プレイヤーリストを設定するコマンドです。
+
+|Command|Options|Desecaption|  
+|---|---|---|
+|ri target add|&lt;groupName&gt; &lt;playerNames...&gt;|プレイヤーをリストに追加します。|
+|ri target remove|&lt;groupName&gt; &lt;playerNames...&gt;|プレイヤーをリストから除外します。|
+|ri target list|&lt;groupName&gt;|リストに所属するプレイヤー一覧を表示します。
+
+#### ri targets
+
+プレイヤーリストの設定を制御するコマンドです。
+
+|Command|Options|Desecaption|  
+|---|---|---|
+|ri targets delete|&lt;groupName&gt;|プレイヤーリストを削除します。|
+|ri targets clear|&lt;groupName&gt;|プレイヤーリストをすべて削除します。|
+|ri targets list|none|プレイヤーリスト名の一覧を表示します。|
