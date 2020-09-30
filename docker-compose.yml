@@ -1,0 +1,62 @@
+version: "3.0"
+
+services:
+  spigot-1.15.1:
+    hostname: spigot-1.15.1
+    image: kuroko3417/mc-server-spigot-1.15.1:latest
+    container_name: spigot-1.15.1
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "25565:25565"
+    volumes:
+      - ./Raijin-1.15.1/target:/opt/minecraft/plugins
+    tty: true
+
+  spigot-1.15.2:
+    hostname: spigot-1.15.2
+    image: kuroko3417/mc-server-spigot-1.15.2:latest
+    container_name: spigot-1.15.2
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "25566:25565"
+    volumes:
+      - ./Raijin-1.15.2/target:/opt/minecraft/plugins
+    tty: true
+
+  spigot-1.16.1:
+    hostname: spigot-1.16.1
+    image: kuroko3417/mc-server-spigot-1.16.1:latest
+    container_name: spigot-1.16.1
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "25567:25565"
+    volumes:
+      - ./Raijin-1.16.1/target:/opt/minecraft/plugins
+    tty: true
+
+  spigot-1.16.2:
+    hostname: spigot-1.16.2
+    image: kuroko3417/mc-server-spigot-1.16.2:latest
+    container_name: spigot-1.16.2
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "25568:25565"
+    volumes:
+      - ./Raijin-1.16.2/target:/opt/minecraft/plugins
+    tty: true
+
+  spigot-1.16.3:
+    hostname: spigot-1.16.3
+    image: kuroko3417/mc-server-spigot-1.16.3:latest
+    container_name: spigot-1.16.3
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "25569:25565"
+    volumes:
+      - ./Raijin-1.16.3/target:/opt/minecraft/plugins
+    tty: true
