@@ -236,3 +236,4 @@ killコマンド実行するタイミングで上手く逃げたINKYATENSEIを�
 |ri targets clear|&lt;groupName&gt;|プレイヤーリストをすべて削除します。|
 |ri targets list|none|プレイヤーリスト名の一覧を表示します。|
 
+
