@@ -23,6 +23,26 @@
 
 <br>
 
+## 導入手順
+
+
+### ダウンロード
+
+jarファイルをダウンロードし、spigotサーバーの`plugins`ディレクトリに設置してください。  
+jarファイルはGitHub Package Registryからダウンロードできます。
+
+ - [Raijin 1.16.3](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.16.3_latest)
+
+ - [Raijin 1.16.2](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.16.2_latest)
+
+ - [Raijin 1.16.1](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.16.1_latest)
+
+ - [Raijin 1.15.2](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.15.2_latest)
+
+ - [Raijin 1.15.1](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.15.1_latest)
+
+
+
 
 ## 主な使い方
 
@@ -235,5 +255,4 @@ killコマンド実行するタイミングで上手く逃げたINKYATENSEIを�
 |ri targets delete|&lt;groupName&gt;|プレイヤーリストを削除します。|
 |ri targets clear|&lt;groupName&gt;|プレイヤーリストをすべて削除します。|
 |ri targets list|none|プレイヤーリスト名の一覧を表示します。|
-
 
