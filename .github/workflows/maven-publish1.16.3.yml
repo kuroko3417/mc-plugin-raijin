@@ -1,8 +1,8 @@
 name: Build 1.16.3
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ master ]
 
 jobs:
   build:
