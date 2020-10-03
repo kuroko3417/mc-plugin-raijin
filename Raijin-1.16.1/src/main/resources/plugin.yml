@@ -1,6 +1,0 @@
-name: Raijin
-version: ${project.version}
-main: kuroko3417.raijin.Raijin
-api-version: 1.16.1
-authors: [kuroko3417]
-description: 雷神Plugin
