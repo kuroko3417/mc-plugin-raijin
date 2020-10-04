@@ -9,6 +9,6 @@ public class LightningStrike extends DeathType{
     
     @Override
     public String deathMessage() {
-        return this.player.getName() + "は落雷によって死亡した。";
+        return this.player.getName() + "は落雷によって死亡した";
     }
 }

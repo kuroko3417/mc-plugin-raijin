@@ -9,6 +9,6 @@ public class Purgatory extends DeathType{
     
     @Override
     public String deathMessage() {
-        return this.player.getName() + "は煉獄されて死亡した。";
+        return this.player.getName() + "は煉獄されて死亡した";
     }
 }

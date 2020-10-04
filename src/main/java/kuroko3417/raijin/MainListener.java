@@ -23,7 +23,7 @@ import static org.bukkit.Bukkit.getServer;
 public class MainListener implements org.bukkit.event.Listener {
     
     private Raijin raijin;
-    public FileIO fileIo;
+//    public FileIO fileIo;
     public Setting setting;
     public DeathList deathList;
     public TargetLists targetLists;
@@ -32,7 +32,7 @@ public class MainListener implements org.bukkit.event.Listener {
     
     public MainListener(Raijin raijin){
         this.raijin        = raijin;
-        this.fileIo        = raijin.fileIo;
+//        this.fileIo        = raijin.fileIo;
         this.setting       = raijin.setting;
         this.deathList     = raijin.deathList;
         this.targetLists   = raijin.targetLists;

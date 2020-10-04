@@ -17,14 +17,14 @@ import static org.bukkit.Bukkit.getLogger;
 
 public class MainTabCompletion implements TabCompleter {
     
-    public FileIO fileIo;
+//    public FileIO fileIo;
     public Setting setting;
     public TargetLists targetLists;
     public ObserverList observerList;
     public PurgatoryList purgatoryList;
     
     public MainTabCompletion(Raijin raijin){
-        this.fileIo        = raijin.fileIo;
+//        this.fileIo        = raijin.fileIo;
         this.setting       = raijin.setting;
         this.targetLists   = raijin.targetLists;
         this.observerList  = raijin.observerList;
@@ -47,6 +47,7 @@ public class MainTabCompletion implements TabCompleter {
             complements.add("targets");
             complements.add("power");
             complements.add("death");
+            complements.add("easteregg");
             return complements;
         }
         
@@ -70,6 +71,8 @@ public class MainTabCompletion implements TabCompleter {
                     return this.powerComplements(args);
                 case "death":
                     return this.deathComplements(args);
+                case "easteregg":
+                    return this.eastereggComplements(args);
                 default:
                     // 候補を表示しない
                     return complements;
@@ -272,6 +275,18 @@ public class MainTabCompletion implements TabCompleter {
         return complements;
     }
     
+    private List<String>eastereggComplements(String[] args){
+        List<String> complements = new ArrayList<>();
+        int length = args.length;
+        if(length == 2) {
+            complements.add("true");
+            complements.add("false");
+            complements.add("reset");
+            return complements;
+        }
+        return complements;
+    }
+    
     private List<String> getOnlinePlayerNames(){
         List<String> complements = new ArrayList<>();
         for (Player player : Bukkit.getServer().getOnlinePlayers()){
@@ -280,27 +295,11 @@ public class MainTabCompletion implements TabCompleter {
         return complements;
     }
 
-
-
-
-
-
-
     private List<String> offlinePlayerToNameList(OfflinePlayer[] offlinePlayers){
         List<String> nameList = new ArrayList<>();
         for (OfflinePlayer offlinePlayer : offlinePlayers){
             nameList.add(offlinePlayer.getName());
         }
         return nameList;
-    }
-    
-    
-    private List<String>addWhitelistPlayerNames(){
-        List<String> complements = new ArrayList<>();
-    
-        for (OfflinePlayer player : Bukkit.getServer().getWhitelistedPlayers()){
-            complements.add(player.getName());
-        }
-        return complements;
     }
 }

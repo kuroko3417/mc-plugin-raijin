@@ -8,13 +8,16 @@ public class Setting implements Marker {
     private final int LIGHTNING_POWER_MIN                = 0;
     private final int LIGHTNING_POWER_DEFAULT            = 0;
     private final boolean LIGHTNING_STRIKE_DEATH_DEFAULT = true;
+    private final boolean EASTER_EGG_STATE_DEFAULT       = false;
 
     private int lightningPower;
     private boolean lightningStrikeDeath;
+    private boolean easterEggState;
 
     public Setting(){
-        this.resetLightningPower();;
+        this.resetLightningPower();
         this.resetLightningStrikeDeath();
+        this.resetEasterEggState();
     }
 
     public void setLightningPower(int power){
@@ -47,6 +50,22 @@ public class Setting implements Marker {
     
     public void resetLightningStrikeDeath(){
         this.lightningStrikeDeath = this.LIGHTNING_STRIKE_DEATH_DEFAULT;
+    }
+    
+    
+    /**
+     * ri tsコマンドをkono_aの台パンネタに置き換える設定
+     */
+    public void setEasterEggState(boolean state){
+        this.easterEggState = state;
+    }
+    
+    public boolean getEasterEggState(){
+        return this.easterEggState;
+    }
+    
+    public void resetEasterEggState(){
+        this.easterEggState = this.EASTER_EGG_STATE_DEFAULT;
     }
     
 }

@@ -1,6 +1,14 @@
 name: Raijin
 version: ${project.version}
 main: kuroko3417.raijin.Raijin
+
 authors: [kuroko3417]
 description: 雷神Plugin
 website: https://github.com/kuroko3417/mc-plugin-raijin
+
+
+commands:
+  ri:
+    description: 雷神Pluginコマンド
+    permission: raijin.Raijin.basic
+    permission-message: You don't have <permission>
