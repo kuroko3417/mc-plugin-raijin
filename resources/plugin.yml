@@ -4,3 +4,9 @@ main: kuroko3417.raijin.Raijin
 api-version: 1.15.2
 authors: [kuroko3417]
 description: 雷神Plugin
+
+commands:
+  ri:
+    description: 雷神Pluginのコマンド
+    permission: raijin.Raijin.basic
+    permission-message: You don't have <permission>
