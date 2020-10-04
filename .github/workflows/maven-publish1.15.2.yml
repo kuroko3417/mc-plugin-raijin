@@ -2,7 +2,9 @@ name: Build 1.15.2
 
 on:
   push:
-    branches: [ master ]
+#    branches: [ master ]
+    tags:
+      - v*
 
 jobs:
   build:
