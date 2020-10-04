@@ -18,30 +18,73 @@
 指定したプレイヤーをキルするだけならkillコマンドで十分ですが、**killコマンドは特定のプレイヤーを確実に殺すには不十分**です。
 そこで指定したプレイヤーを**確実に殺す**ことを重視したPluginを作成しました。
 
-ただ殺すだけでは面白みがないので、雷でカッコよく殺せるようにしました。  
-これで中二病のNishito_31さんも興奮すると思います！
+ただ殺すだけでは面白みがないので、雷でカッコよく殺せるようにしました。 
 
 <br>
 
 ## 導入手順
 
+jarファイルをダウンロードし、spigotサーバーの`plugins`ディレクトリに設置してください。  
 
 ### ダウンロード
 
-jarファイルをダウンロードし、spigotサーバーの`plugins`ディレクトリに設置してください。  
-jarファイルはGitHub Package Registryからダウンロードできます。
+jarファイルは[GitHub Package Registry](https://github.com/kuroko3417?tab=packages)からダウンロード、  
+または`curl`、`wget`コマンドを利用してダウンロードしてください。
 
- - [Raijin 1.16.3](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.16.3_latest)
+#### curl
 
- - [Raijin 1.16.2](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.16.2_latest)
+Raigin-1.15.1_v1.0.0.jar
+```
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.1_v1.0.0.jar -o Raigin-1.15.1_v.1.0.0.jar
+```
 
- - [Raijin 1.16.1](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.16.1_latest)
+Raigin-1.15.2_v1.0.0.jar
+```
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.2_v1.0.0.jar -o Raigin-1.15.2_v.1.0.0.jar
+```
 
- - [Raijin 1.15.2](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.15.2_latest)
+Raigin-1.16.1_v1.0.0.jar
+```
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.1_v1.0.0.jar -o Raigin-1.16.1_v.1.0.0.jar
+```
 
- - [Raijin 1.15.1](https://github.com/kuroko3417/mc-plugin-raijin/packages/424966?version=1.15.1_latest)
+Raigin-1.16.2_v1.0.0.jar
+```
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.2_v1.0.0.jar -o Raigin-1.16.2_v.1.0.0.jar
+```
+
+Raigin-1.16.3_v1.0.0.jar
+```
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.3_v1.0.0.jar -o Raigin-1.16.3_v.1.0.0.jar
+```
+
+#### wget
 
 
+Raigin-1.15.1_v1.0.0.jar
+```
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.1_v1.0.0.jar
+```
+
+Raigin-1.15.2_v1.0.0.jar
+```
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.2_v1.0.0.jar
+```
+
+Raigin-1.16.1_v1.0.0.jar
+```
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.1_v1.0.0.jar
+```
+
+Raigin-1.16.2_v1.0.0.jar
+```
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.2_v1.0.0.jar
+```
+
+Raigin-1.16.3_v1.0.0.jar
+```
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.3_v1.0.0.jar
+```
 
 
 ## 主な使い方
