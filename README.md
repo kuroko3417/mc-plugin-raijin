@@ -1,7 +1,7 @@
 # 雷神Plugin
 
 雷神Pluginはマインクラフト内の雷を操るPluginです。  
-雷神Pluginを利用することで今までより快適なサーバーライフを送ることができます。
+雷神Pluginを利用することで、力による秩序を50人クラフトに提供します。
 
 <br>
  
@@ -15,7 +15,8 @@
 <br>
 <br>
 
-指定したプレイヤーをキルするだけならkillコマンドで十分ですが、**killコマンドは特定のプレイヤーを確実に殺すには不十分**です。
+指定したプレイヤーをキルするだけならkillコマンドで十分ですが、  
+**killコマンドは特定のプレイヤーを確実に殺すには不十分**です。  
 そこで指定したプレイヤーを**確実に殺す**ことを重視したPluginを作成しました。
 
 ただ殺すだけでは面白みがないので、雷でカッコよく殺せるようにしました。 
@@ -31,7 +32,7 @@
  - 指定したプレイヤーグループに雷を落とす。
  - 指定したプレイヤーにスポーンするたびに雷を落とす。
  - 指定したプレイヤーがJoinしたときに雷を落とす。
-
+ 
 雷を受けたプレイヤーは即死します。（コマンド経由で設定変更可能）
 
 <br>
@@ -61,7 +62,7 @@
 
 <br>
 
-コマンド実行後、指定したプレイヤーグループに所属するプレイヤー全員に雷を落とします。
+コマンド実行後、指定したプレイヤーグループに所属するプレイヤー全員に雷を落とします。  
 プレイヤーグループとはプレイヤーをまとめたグループのことで、雷神Pluginの機能の一つです。
 
 #### プレイヤーグループの設定方法
@@ -77,10 +78,8 @@
 
 <br>
 
-プレイヤーグループを設定することでグループ単位に雷を落とすことが可能になるので、
+プレイヤーグループを設定することでグループ単位に雷を落とすことが可能になるので、  
 複数人のトロールが発生しても速やかに対処することが可能です。
-
-この機能を有効活用することで、快適なサーバーライフを送ることができると思います。
 
 
 ### 指定したプレイヤーにスポーンするたびに雷を落とす
@@ -125,8 +124,6 @@
 補完表示されるプレイヤーの一覧はホワイトリストを元に生成しています。（`ri rs`コマンド以外）
 そのためオフラインプレイヤーの設定も可能です。
 
-`ri rs`コマンドは任意のタイミングで雷を落とすコマンドなので、補完表示はオンラインプレイヤーのみの仕様です。
-
 ### ri obsコマンドの設定について
 
 `ri obs`コマンドにて設定したプレイヤーの処理が実行されると、設定が自動で解除されます。（1回きり）
@@ -155,8 +152,6 @@
 |ri pur remove|&lt;groupName&gt;|対象からプレイヤを除外します。|
 |ri pur list|none|対象のプレイヤー名一覧を表示します。|
 
-備考:オフラインプレイヤーを指定することが可能です。
-
 ### ri obs
 
 ***
@@ -169,19 +164,17 @@ Join時に雷を落としたいプレイヤーを設定するコマンドです�
 |ri obs remove|&lt;groupName&gt;|対象からプレイヤを除外します。|
 |ri obs list|none|対象のプレイヤー名一覧を表示します。|
 
-備考:オフラインプレイヤーを指定することが可能です。
-
 注意:設定対象がJoinして雷が落ちたあと、設定対象から自動的に除外されます。
 
 ### ri rs
 
 ***
 
-指定したプレイヤーまたはプレイヤーグループに雷を落とします。
+指定したプレイヤー、またはプレイヤーグループに雷を落とします。
 
 |Command|Options|Desecaption|  
 |---|---|---|
-|ri rs|&lt;playerNames... or groupNames...&gt;|指定したプレイヤーまたはプレイヤーグループに雷を落とします。|  
+|ri rs|&lt;playerNames... or groupNames...&gt;|指定したプレイヤー、またはプレイヤーグループに雷を落とします。|  
 
 ## 設定コマンド
 
@@ -232,6 +225,28 @@ Join時に雷を落としたいプレイヤーを設定するコマンドです�
 |ri targets clear|&lt;groupName&gt;|プレイヤーグループをすべて削除します。|
 |ri targets list|none|設定されたプレイヤーグループ名の一覧を表示します。|
 
+### ri ts（ネタ用コマンド）
+
+***
+
+オンラインのプレイヤーにランダムで雷を落とします。
+
+雷が落ちる数、プレイヤーはすべてランダムです。
+
+
+### ri easteregg（ネタ用コマンド）
+
+イースターエッグの設定を制御するコマンドです。  
+
+`/ri easteregg true`を実行した後に`/ri ts`を実行すると...
+
+|Command|Options|Desecaption|  
+|---|---|---|
+|ri easteregg true|none|イースターエッグを有効にします。|
+|ri easteregg false|none|イースターエッグを無効にします。|
+|ri easteregg reset|none|イースターエッグの設定を初期化します。|
+
+
 ## 導入手順
 
 jarファイルをダウンロードし、spigotサーバーの`plugins`ディレクトリに設置してください。  
@@ -243,56 +258,56 @@ jarファイルは[GitHub Package Registry](https://github.com/kuroko3417?tab=pa
 
 #### curl
 
-Raigin-1.15.1_v1.0.0.jar
+Raigin-1.15.1-latest.jar
 ```
-curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.1_v1.0.0.jar -o Raigin-1.15.1_v.1.0.0.jar
-```
-
-Raigin-1.15.2_v1.0.0.jar
-```
-curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.2_v1.0.0.jar -o Raigin-1.15.2_v.1.0.0.jar
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.1-latest.jar -o Raigin-1.15.1-latest.jar
 ```
 
-Raigin-1.16.1_v1.0.0.jar
+Raigin-1.15.2-latest.jar
 ```
-curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.1_v1.0.0.jar -o Raigin-1.16.1_v.1.0.0.jar
-```
-
-Raigin-1.16.2_v1.0.0.jar
-```
-curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.2_v1.0.0.jar -o Raigin-1.16.2_v.1.0.0.jar
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.2-latest.jar -o Raigin-1.15.2-latest.jar
 ```
 
-Raigin-1.16.3_v1.0.0.jar
+Raigin-1.16.1-latest.jar
 ```
-curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.3_v1.0.0.jar -o Raigin-1.16.3_v.1.0.0.jar
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.1-latest.jar -o Raigin-1.16.1-latest.jar
+```
+
+Raigin-1.16.2-latest.jar
+```
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.2-latest.jar -o Raigin-1.16.2-latest.jar
+```
+
+Raigin-1.16.3-latest.jar
+```
+curl -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.3-latest.jar -o Raigin-1.16.3-latest.jar
 ```
 
 #### wget
 
 
-Raigin-1.15.1_v1.0.0.jar
+Raigin-1.15.1-latest.jar
 ```
-wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.1_v1.0.0.jar
-```
-
-Raigin-1.15.2_v1.0.0.jar
-```
-wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.2_v1.0.0.jar
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.1-latest.jar
 ```
 
-Raigin-1.16.1_v1.0.0.jar
+Raigin-1.15.2-latest.jar
 ```
-wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.1_v1.0.0.jar
-```
-
-Raigin-1.16.2_v1.0.0.jar
-```
-wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.2_v1.0.0.jar
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.15.2-latest.jar
 ```
 
-Raigin-1.16.3_v1.0.0.jar
+Raigin-1.16.1-latest.jar
 ```
-wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.3_v1.0.0.jar
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.1-latest.jar
+```
+
+Raigin-1.16.2-latest.jar
+```
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.2-latest.jar
+```
+
+Raigin-1.16.3-latest.jar
+```
+wget -L https://github.com/kuroko3417/mc-plugin-raijin/raw/master/packagefiles/Raijin-1.16.3-latest.jar
 ```
 
